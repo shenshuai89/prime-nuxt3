@@ -27,6 +27,10 @@ If you want to set the color mode to `dark` or `light` by PrimeVue, you can set 
 The tailwind css color config is set to `light` by default. If you want to set the color mode to `dark` or `light` by tailwind css, you can set the `colorMode` property is `dark` or `light` in the `nuxt.config.ts` file.
 you must set the `primevue.theme.darkModeSelector` property is `system ` in the `nuxt.config.ts` or hidden the `primevue.theme.darkModeSelector` property in the `nuxt.config.ts` file.;
 
+### use PrimeVue theme and tailWind css color config
+`primevue.theme.darkModeSelector` setting `.dark` in `nuxt.config.ts`
+`darkMode: ['class', '.dark']` setting in `tailwind.config.js`
+
 ## Setup
 
 Make sure to install dependencies:
