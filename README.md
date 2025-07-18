@@ -13,6 +13,20 @@ dependencies:
 devDependencies:
 + @primevue/nuxt-module
 
+## colorMode setting
+install
+```
+pnpm add primeicons
+npx nuxi module add color-mode
+```
+The colorMode setting is set to `system` by default. This means that the color mode will be automatically set based on the user's system preferences. If the user has not set a preference, the color mode will default to `light`.
+### use PrimeVue theme
+If you want to set the color mode to `dark` or `light` by PrimeVue, you can set the `primevue.theme.darkModeSelector` property is `.dark` in the `nuxt.config.ts` file to the desired value. But this is overrided by the tailWind css color config.
+
+### use tailWind css color config
+The tailwind css color config is set to `light` by default. If you want to set the color mode to `dark` or `light` by tailwind css, you can set the `colorMode` property is `dark` or `light` in the `nuxt.config.ts` file.
+you must set the `primevue.theme.darkModeSelector` property is `system ` in the `nuxt.config.ts` or hidden the `primevue.theme.darkModeSelector` property in the `nuxt.config.ts` file.;
+
 ## Setup
 
 Make sure to install dependencies:
