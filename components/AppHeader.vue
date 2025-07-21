@@ -1,21 +1,22 @@
 <template>
-  <header class="fixed top-0 left-0 w-full backdrop-blur-md border-b z-50">
+  <!-- 测试 全局主题色 使用的 -->
+  <header class="fixed left-0 top-0 z-50 w-full border-b backdrop-blur-md">
     <div
-      class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3 h-[60px]"
+      class="mx-auto flex h-[60px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8"
     >
       <!-- 左侧 Logo -->
-      <div class="lg:flex-1 flex items-center gap-1.5 min-w-0">
+      <div class="flex min-w-0 items-center gap-1.5 lg:flex-1">
         <NuxtLink to="/" class="flex items-center gap-2">
-          <div class="w-6 h-6 flex-shrink-0">
+          <div class="h-6 w-6 flex-shrink-0">
             <!-- 先用 favicon 代替logo图片 -->
-            <img src="/favicon.ico" alt="Logo" class="w-full h-full object-contain" />
+            <img src="/favicon.ico" alt="Logo" class="h-full w-full object-contain" />
           </div>
           <span class="text-base font-medium">Site Name</span>
         </NuxtLink>
       </div>
 
       <!-- 中间导航 -->
-      <nav class="items-center gap-x-8 hidden lg:flex">
+      <nav class="hidden items-center gap-x-8 lg:flex">
         <NuxtLink
           v-for="item in navItems"
           :key="item.path"
@@ -27,9 +28,9 @@
       </nav>
 
       <!-- 右侧功能区 -->
-      <div class="flex items-center justify-end lg:flex-1 gap-1.5">
+      <div class="flex items-center justify-end gap-1.5 lg:flex-1">
         <client-only>
-          <Button @click="toggleMode" outlined class="flex items-center gap-2 p-button-text">
+          <Button @click="toggleMode" outlined class="p-button-text flex items-center gap-2">
             <span class="pi" :class="modeIcon"></span>
             <span v-if="colorMode.preference === 'light'">Light</span>
             <span v-if="colorMode.preference === 'dark'">Dark</span>

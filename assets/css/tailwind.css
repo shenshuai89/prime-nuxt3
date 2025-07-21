@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 自定义 css 类 */
+@layer utilities {
+  @variants {
+    /* 下划线动画 */
+    .underline-scale {
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size 0.3s;
+    }
+    .underline-scale:hover {
+      background-size: 100% 2px;
+    }
+    /* 保持下划线颜色状态 */
+    .underline-scale-color {
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 2px;
+    }
+  }
+}
+/* 自定义 tailwind 样式组合的class 类 */
+.btn-style {
+  @apply rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700;
+}
