@@ -1,6 +1,4 @@
-// import type { Config } from 'tailwindcss';
 // tailwind.config.js
-const plugin = require('tailwindcss/plugin');
 // 引用PrimeUI
 import PrimeUI from 'tailwindcss-primeui';
 
@@ -25,11 +23,13 @@ export default {
   // 添加plugins、darkMode配置项
   plugins: [
     PrimeUI,
-    plugin(function ({ addUtilities, matchUtilities, theme }) {
+    // 下行不进行类型校验 ，直接使用 any
+    function (config: any) {
+      const { addUtilities, matchUtilities, theme } = config;
       matchUtilities(
         {
           // 工具类名前缀 => 生成的样式
-          'text-size': (value) => ({
+          'text-size': (value: any) => ({
             fontSize: value,
           }),
         },
@@ -41,7 +41,7 @@ export default {
       matchUtilities(
         // 定义颜色 red yellow blue
         {
-          'bg-color': (value) => ({
+          'bg-color': (value: any) => ({
             backgroundColor: value,
           }),
         },
@@ -68,7 +68,7 @@ export default {
       };
 
       addUtilities(newUtilities);
-    }),
+    },
   ],
   // 在class模式和media查询模式之间做个权衡。前者更灵活，后者更简单。
   // `class` 模式通过手动添加 `dark` 类实现暗黑模式，灵活性高，适合需要精细控制的场景；
