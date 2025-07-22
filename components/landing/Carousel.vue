@@ -8,11 +8,17 @@
     class="custom-carousel w-full"
   >
     <template #item="slotProps">
-      <div class="dark:border-surface-700 relative w-full rounded bg-slate-400">
-        <div class="absolute top-1/4 left-[5%] w-1/3">
-          <p class="text-7xl font-bold text-white">{{ slotProps.data.title }}</p>
-          <p class="mt-4 text-2xl font-normal text-white">{{ slotProps.data.desc }}</p>
-          <Button class="mt-8" label="Learn more" />
+      <div class="relative w-full rounded bg-slate-400 dark:border-surface-700">
+        <div class="absolute left-[5%] top-[10%] w-1/2 md:top-1/4 md:w-1/3">
+          <p class="text-3xl font-bold text-white md:text-7xl">{{ slotProps.data.title }}</p>
+          <p class="mt-4 text-[10px] font-light tracking-wide text-white md:text-2xl">{{
+            slotProps.data.desc
+          }}</p>
+          <Button
+            class="mt-4 md:mt-8"
+            label="Learn more"
+            :size="activeBreakpoint < 2 ? 'small' : 'large'"
+          />
         </div>
         <img :src="slotProps.data.image" mode="scaleToFill" />
       </div>
@@ -55,6 +61,14 @@
       numScroll: 1,
     },
   ]);
+
+  const activeBreakpoint = ref(0);
+  onMounted(() => {
+    window.addEventListener('resize', () => {
+      activeBreakpoint.value = getActiveBreakpoint();
+    });
+    activeBreakpoint.value = getActiveBreakpoint();
+  });
 </script>
 
 <style scoped>
