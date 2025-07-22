@@ -10,7 +10,7 @@
         >
       </div>
       <p
-        class="!mb-4 block font-sans text-base !font-normal font-light leading-relaxed !text-gray-600 text-inherit antialiased"
+        class="!mb-4 block font-sans text-base !font-normal leading-relaxed !text-gray-600 text-inherit antialiased"
         >Framework-specific guides that cover our recommended approach to installing
         @material-tailwind/react in a number of popular environments. Select your preferred
         framework from the list below and follow the instructions.</p
