@@ -1,5 +1,9 @@
 <template>
-  <LandingCarousel />
+  <div>
+    <LandingCarousel />
+    <LandingIndexCard />
+    <LandingFrameworks />
+  </div>
 </template>
 
 <script setup lang="ts">
