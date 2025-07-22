@@ -48,12 +48,12 @@
               class="absolute left-0 z-10 mt-2 w-32 rounded border-t-2 border-t-gray-100 bg-white shadow-lg dark:bg-gray-700"
             >
               <nuxt-link
-                to="/product1"
+                to="/product/product1"
                 class="underline-scale block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-gray-200 dark:hover:bg-gray-600"
                 >Product 1</nuxt-link
               >
               <nuxt-link
-                to="/product2"
+                to="/product/product2"
                 class="underline-scale block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-gray-200 dark:hover:bg-gray-600"
                 >Product 2</nuxt-link
               >
@@ -129,13 +129,13 @@
             <transition name="slide">
               <div v-show="productSubMenuOpen" class="space-y-2 bg-slate-100 pl-4">
                 <nuxt-link
-                  to="/product1"
+                  to="/product/product1"
                   @click="closeMobileMenu"
                   class="block border-b border-gray-200 py-2 text-gray-700 dark:border-gray-700 dark:text-gray-200"
                   >Product 1</nuxt-link
                 >
                 <nuxt-link
-                  to="/product2"
+                  to="/product/product2"
                   @click="closeMobileMenu"
                   class="block border-b border-gray-200 py-2 text-gray-700 dark:border-gray-700 dark:text-gray-200"
                   >Product 2</nuxt-link
