@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 隐藏滚动条 */
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE 和 Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none;
+}
 /* 自定义 css 类 */
 @layer utilities {
+  /* 隐藏 Chrome, Safari 和 Opera 的滚动条 */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* 隐藏 IE, Edge 和 Firefox 的滚动条 */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE 和 Edge */
+    scrollbar-width: none; /* Firefox */
+  }
   /* 下划线动画 */
   .underline-scale {
     text-decoration: none;

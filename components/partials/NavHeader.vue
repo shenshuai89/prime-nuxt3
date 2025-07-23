@@ -61,6 +61,11 @@
           </transition>
         </div>
         <nuxt-link
+          to="/about"
+          class="underline-scale text-gray-700 hover:text-primary-500 dark:text-gray-200"
+          >About</nuxt-link
+        >
+        <nuxt-link
           to="/contact"
           class="underline-scale text-gray-700 hover:text-primary-500 dark:text-gray-200"
           >Contact</nuxt-link
@@ -144,6 +149,12 @@
             </transition>
           </div>
 
+          <nuxt-link
+            to="/about"
+            @click="closeMobileMenu"
+            class="py-2 text-gray-700 dark:text-gray-200"
+            >About</nuxt-link
+          >
           <nuxt-link
             to="/contact"
             @click="closeMobileMenu"
