@@ -38,7 +38,7 @@
             <i
               :class="[
                 productMenuOpen ? 'pi pi-chevron-up text-primary-500' : 'pi pi-chevron-down',
-                'text-sm',
+                '!text-sm',
               ]"
             ></i>
           </button>
@@ -88,8 +88,8 @@
         <button @click="toggleMobileMenu" class="p-2 text-gray-700 dark:text-gray-200 md:hidden">
           <i
             :class="{
-              'pi pi-bars text-xl': !mobileMenuOpen,
-              'pi pi-times text-xl': mobileMenuOpen,
+              'pi pi-bars !text-xl': !mobileMenuOpen,
+              'pi pi-times !text-xl': mobileMenuOpen,
             }"
           ></i>
         </button>

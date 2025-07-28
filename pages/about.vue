@@ -28,7 +28,7 @@
           >
           <div class="pt-8">
             <div class="mb-4 flex justify-center text-left md:justify-start">
-              <i class="pi pi-camera text-7xl text-blue-800"></i>
+              <i class="pi pi-camera !text-7xl text-blue-800"></i>
               <div class="ml-6">
                 <p class="text-2xl font-bold text-blue-800">Our Services</p>
                 <span>
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="mb-4 flex justify-center text-left md:justify-start">
-              <i class="pi pi-bell text-7xl text-blue-800"></i>
+              <i class="pi pi-bell !text-7xl text-blue-800"></i>
               <div class="ml-6">
                 <p class="text-2xl font-bold text-blue-800">Company Award</p>
                 <span>
